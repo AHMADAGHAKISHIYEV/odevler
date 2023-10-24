@@ -1,0 +1,53 @@
+public class odev3ornek1{}
+/*
+Yazılım geliştirme sürecinde birçok farklı hata türü meydana gelebilir. Bu hataların önceden önlenmesi veya erken tespit edilmesi için çeşitli yaklaşımlar kullanılabilir. İşte yazılım geliştirme sırasında karşılaşılabilecek hata türleri ve hataları minimize etmek için yapılması gerekenler:
+
+1. **Derleme Hataları (Compile Errors)**:
+   - Söz dizimi hataları: Kodun dil yapısına uymaması.
+   - Tanımsız değişkenler veya fonksiyonlar: Kullanılan değişken veya fonksiyonların tanımlanmamış olması.
+   - Eksik noktalama işaretleri: Kodun eksik veya yanlış noktalama işaretleri kullanması.
+
+   **Çözüm**: Dikkatli kod yazımı, derleme hatalarını önlemeye yardımcı olur.
+
+2. **Çalışma Zamanı Hataları (Runtime Errors)**:
+   - Bölme sıfır hatası: Bir sayının sıfıra bölünmesi.
+   - Dizi sınırları dışında erişim: Bir diziye veya listedeki sınırların dışına erişim.
+   - Tür dönüşüm hatası: Veri türlerinin uyumsuzluğu veya dönüşüm hatası.
+
+   **Çözüm**: İyi test edilmiş ve hatayı ele alan kod yazımı.
+
+3. **Mantıksal Hatalar (Logic Errors)**:
+   - Hatalı mantıksal işlemler: Yanlış şart ifadeleri veya işlem sırası.
+   - Beklenmedik sonuçlar: Programın hatalı sonuçlar üretmesi.
+
+   **Çözüm**: Kod incelemesi, iyi tasarım ve test süreçleri ile mantıksal hataların tespiti ve düzeltilmesi.
+
+4. **Hata İzleme (Exception Handling)**:
+   - Hata işleme eksikliği: Programın hata durumlarına uygun bir şekilde cevap vermemesi.
+
+   **Çözüm**: Hata izleme işlemlerinin eklenmesi ve hata mesajlarının anlaşılır bir şekilde görüntülenmesi.
+
+5. **Bellek Yönetimi Hataları**:
+   - Bellek sızıntıları: Bellek alanlarının serbest bırakılmaması.
+   - Bellek taşmaları: Bellek sınırlarının aşılması.
+
+   **Çözüm**: Bellek yönetimi en iyi uygulamalarına uygun kod yazımı.
+
+En az hata ile kod yazmak için aşağıdaki adımları takip edebilirsiniz:
+
+1. **İyi Planlama**: İyi bir tasarım ve planlama ile projenizi başlayın. İyi tanımlanmış gereksinimler, tasarım dokümanları ve hedeflerle işe başlayın.
+
+2. **Test İlkelerine Uyun**: Kodunuzu yazmadan önce yazılım test prensiplerini ve en iyi uygulamalarını anlayın.
+
+3. **Kod İncelemesi**: Başka bir geliştirici tarafından kod incelemesi yapılmalıdır. Kod incelemesi, hataları ve geliştirmeleri erken tespit etmenize yardımcı olur.
+
+4. **Sık Sık Test Edin**: Sürekli test yaparak hataları erken tespit edin.
+
+5. **Kod Standartlarına Uyun**: Projenizin bulunduğu topluluktaki kodlama standartlarına uygun kod yazmak, kodun okunabilirliğini ve sürdürülebilirliğini artırır.
+
+6. **Hata İzleme**: Hata izleme (exception handling) kullanarak programınızın hata durumlarına uygun bir şekilde tepki vermesini sağlayın.
+7. **Belgeleme**: Kodunuzu açık ve anlaşılır bir şekilde belgeleyin. İyi yorumlar ekleyin.
+8. **Sürekli İyileştirme**: Sürekli olarak kodunuzu ve süreçlerinizi gözden geçirin ve geliştirin.
+Yukarıdaki adımlar, daha az hata içeren ve daha güvenilir yazılım geliştirmenize yardımcı olacaktır.
+Hata azaltmanın temel prensibi, hataların erken tespit edilmesi ve düzeltilmesidir, bu nedenle test süreçleri ve kod incelemeleri önemlidir.
+ */
