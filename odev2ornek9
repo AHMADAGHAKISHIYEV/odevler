@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class ornek9 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Saniye girin: ");
+        int saniye = scanner.nextInt();
+        displayDuration(saniye); // displayDuration metodu çağrılır
+    }
+
+    public static void displayDuration(long seconds) {
+        // Verilen saniyeyi saat, dakika ve saniye olarak ayrıştır
+        long hours = seconds / 3600;
+        long minutes = (seconds % 3600) / 60;
+        long remainingSeconds = seconds % 60;
+
+        // Saat, dakika ve saniye değerlerini ekrana yazdır
+        if (hours > 0) {
+            System.out.print(hours + " saat ");
+        }
+
+        if (minutes > 0) {
+            System.out.print(minutes + " dakika ");
+        }
+
+        if (remainingSeconds > 0) {
+            System.out.print(remainingSeconds + " saniye");
+        }
+
+        // Eğer süre 0 saniye ise "0 saniye" olarak ekrana yazdır
+        if (hours == 0 && minutes == 0 && remainingSeconds == 0) {
+            System.out.print("0 saniye");
+        }
+
+        System.out.println(); // Sonuç çıktısının altına bir satır sonu ekleyin
+    }
+}
