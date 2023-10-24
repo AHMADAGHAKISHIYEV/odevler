@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class ornek10 {
+ 
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Sayıyı girin: ");
+        int sayi = scanner.nextInt();
+        System.out.println("Asal çarpanlar: ");
+        asalCarpanlar(sayi); // asalCarpanlar metodu çağrılır
+        scanner.close();
+    }
+
+    public static void asalCarpanlar(int sayi) {
+        int carpan = 2;
+
+        while (sayi > 1) {
+            if (sayi % carpan == 0) {
+                System.out.print("" + carpan + " "); // Asal çarpanı ekrana yazdır
+                sayi /= carpan; // Sayıyı asal çarpana böle
+            } else {
+                ++carpan; // Bir sonraki potansiyel asal çarpana geç
+            }
+        }
+    }
+}
