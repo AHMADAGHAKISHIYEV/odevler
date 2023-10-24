@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class ornek8 {
+    public ornek8() {
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("n sayisini girin: ");
+        int nsayi = scanner.nextInt();
+
+        int i;
+        int k;
+        for(i = 1; i <= nsayi; ++i) {
+            for(k = 1; k <= nsayi - i; ++k) {
+                System.out.print(" ");
+            }
+
+            for(k = 1; k <= 2 * i - 1; ++k) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+
+        for(i = nsayi - 1; i >= 1; --i) {
+            for(k = 1; k <= nsayi - i; ++k) {
+                System.out.print(" ");
+            }
+
+            for(k = 1; k <= 2 * i - 1; ++k) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
