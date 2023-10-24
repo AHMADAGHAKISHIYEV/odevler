@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class ornek11 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Çift bir sayı girin: ");
+        int ciftSayi = scanner.nextInt();
+
+        // Girişin geçerliliğini kontrol et
+        if (ciftSayi <= 2 || ciftSayi % 2 != 0) {
+            System.out.println("Hatalı giriş. Çift bir sayı girin.");
+        } else {
+            // İki asal sayıyı bul ve yazdır
+            bulAsalCarpanlar(ciftSayi);
+        }
+
+        scanner.close();
+    }
+
+    // Bir sayının asal olup olmadığını kontrol eden metot
+    public static boolean isAsal(int sayi) {
+        if (sayi <= 1) {
+            return false;
+        }
+        if (sayi <= 3) {
+            return true;
+        }
+        if (sayi % 2 == 0 || sayi % 3 == 0) {
+            return false;
+        }
+        for (int i = 5; i * i <= sayi; i = i + 6) {
+            if (sayi % i == 0 || sayi % (i + 2) == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // Verilen çift sayının iki asal çarpanını bulan ve yazdıran metot
+    public static void bulAsalCarpanlar(int ciftSayi) {
+        for (int i = 2; i <= ciftSayi / 2; i++) {
+            // İlk asal sayının kontrolü
+            if (isAsal(i)) {
+                // İkinci asal sayının kontrolü
+                if (isAsal(ciftSayi - i)) {
+                    // İki asal sayıyı yazdır
+                    System.out.println(ciftSayi + " = " + i + " + " + (ciftSayi - i));
+                }
+            }
+        }
+    }
+}
