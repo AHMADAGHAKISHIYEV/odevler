@@ -1,0 +1,20 @@
+public class ornek1ornek2 {
+    public static void main(String[] args) {
+        System.out.println(Math.abs(-2147483648));
+    }
+}
+/*Yukarıdaki işlevin sonucu, kod çalıştırıldığında hala -2147483648 olacaktır.
+Bu durum, giriş sayısının int veri türünün sınırlarını aşmasından kaynaklanır.Çünkü int veri türünün değer
+aralığı -2 147 483 648  -  2 147 483 648  arasıdır
+ */
+
+/*Ornek 2
+API (Application Programming Interface): Yazılım geliştiricilere ve uygulamalara,
+başka yazılımlarla etkileşimde bulunma yetkisi veren bir arayüzdür.
+Veri ve işlem paylaşımını standartlaştırır.
+Kütüphane: Kütüphaneler, tekrar kullanılabilir kod bloklarının bir koleksiyonudur.
+Yazılım geliştiricilerin işlerini hızlandırır ve aynı kodu tekrar tekrar yazma ihtiyacını azaltır.
+MAVEN: MAVEN, Java projelerinin yapılandırılması,
+bağımlılıkların yönetilmesi ve proje otomasyonunu sağlayan bir araçtır.
+Projelerin düzenli ve otomatik inşasını kolaylaştırır, böylece geliştirme sürecini iyileştirir.
+ */
