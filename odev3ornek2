@@ -1,0 +1,29 @@
+import java.util.Random;
+public class odev3ornek2 {
+    public static void Zaratma(int sayi) {
+        // Zarın üst, orta ve alt bölümlerini çizelim
+        System.out.println(" ------- ");
+        System.out.println("|       |");
+        System.out.println("|   " + sayi + "   |");
+        System.out.println("|       |");
+        System.out.println(" ------- ");
+    }
+
+        public static void main(String[] args) {
+            // Zar simülasyonunu başlat
+            Random random = new Random();
+
+            // İki zarın sonuçlarını rastgele oluştur
+            int zar1 = random.nextInt(6) + 1; // 1-6 arası rastgele bir sayı seçiyoruz
+            int zar2 = random.nextInt(6) + 1;
+
+            // Zar resimlerini göster
+            System.out.println("Zar 1: ");
+            Zaratma(zar1);
+            System.out.println("Zar 2: ");
+            Zaratma(zar2);
+        }
+
+        // Zar resmini çizdiren metot
+    }
+
