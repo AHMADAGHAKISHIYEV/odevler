@@ -1,0 +1,56 @@
+/*
+JOptionPane.showMessageDialog():
+Mesaj ve bilgilendirme görüntülemek için kullanılır.
+Hata mesajları, onaylar veya bilgilendirme mesajları göstermek amacıyla kullanılır.
+Örneğin, işlem sonuçlarını veya hataları kullanıcıya bildirmek için kullanılabilir.
+
+JOptionPane.showInputDialog():
+Kullanıcıdan veri girişi almak için kullanılır.
+Kullanıcıya bir metin kutusu içeren pencere gösterir ve veri girmesini sağlar.
+Özellikle kullanıcıdan metin, sayı veya tarih gibi verileri almak için kullanılır.
+Bu yapılar, kullanıcı arayüzü etkileşimini kolaylaştırmak ve bilgi ile veri alışverişi sağlamak için kullanılır.
+
+JOptionPane.showMessageDialog() ve JOptionPane.showInputDialog() yöntemlerini kullanabilmek için,
+bu yöntemleri Java'da kullanılabilir hale getiren Swing kütüphanesini projeeye dahil etmeliyiz.
+ */
+import javax.swing.JOptionPane;
+
+public class ornek4 {
+    public static void main(String[] args) {
+     String num1=JOptionPane.showInputDialog("Birinci sayıyı giriniz:");
+     double sayi1=Double.parseDouble(num1);
+     /*
+Double.parseDouble() bir metin dizesini ondalık bir sayıya dönüştürmek için kullanılır.
+Yani, bu metodu kullanarak bir metin dizesini ondalık bir sayıya çevirebiliriz.
+      */
+     String num2=JOptionPane.showInputDialog("İkinci sayıyı giriniz:");
+     double sayi2=Double.parseDouble(num2);
+
+     String islem=JOptionPane.showInputDialog("1-TOPLAMAn 2-Cikarma/n 3-Vurma/n 4-Bolme/n");
+     int islemler= Integer.parseInt(islem);
+     /*
+     Bu kisimda int veri turu kullanmamizin nedeni switch case kullanabilmektir.
+      */
+
+     double islemsonuc=0;
+     switch (islemler){
+         case 1:
+             islemsonuc=sayi1+sayi2;
+             break;
+         case 2:
+             islemsonuc=sayi1-sayi2;
+             break;
+         case 3:
+             islemsonuc=sayi1*sayi2;
+             break;
+         case 4:
+             islemsonuc=sayi1/sayi2;
+             if (sayi2==0){
+                 JOptionPane.showMessageDialog(null,"Sıfıra bölemezsin");
+                 System.exit(0);
+             }
+     }
+     JOptionPane.showMessageDialog(null,"Sonuç: "+ islemsonuc);
+
+    }
+}
