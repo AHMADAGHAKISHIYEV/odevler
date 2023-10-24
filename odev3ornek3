@@ -1,0 +1,27 @@
+import javax.swing.JOptionPane;
+import java.util.Random;
+public class odev3ornek3 {
+    public static void main(String[] args) {
+        //rastgele sayi uretmesi icin Random sinifini kullaniyoruz
+        Random sayi=new Random();
+        int rastsayi=sayi.nextInt(100)+1;//1-100 arasi sayi uretir
+        int tahminisayi;
+        int deneme=0;
+        JOptionPane.showMessageDialog(null,"Sayi secildi bul! ");
+            try{
+                String tahminsayi=JOptionPane.showInputDialog("Tahmininizi girin : ");
+                tahminisayi= Integer.parseInt(tahminsayi);
+                deneme++;
+                if(tahminisayi != rastsayi){
+                    JOptionPane.showMessageDialog(null,"Yanlis,yeniden deneyin!");
+                }else{
+                    JOptionPane.showMessageDialog(null,"Tebrikler ,dogru!");
+                }
+
+            }catch (NumberFormatException e){
+                JOptionPane.showMessageDialog(null,"Lutfen sayi giriniz!");
+            }
+        ;
+
+    }
+}
