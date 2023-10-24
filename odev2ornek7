@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class ornek7 {
+    public ornek7() {
+    }
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("SAYIYI Giriniz:");
+        int sayi = scan.nextInt();
+        int result = Long.signum((long)sayi);
+        System.out.println("Sayi" + result);
+        scan.close();
+    }
+}
