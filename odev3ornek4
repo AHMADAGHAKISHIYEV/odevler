@@ -1,0 +1,52 @@
+public class odev3ornek4 {
+    public static void main(String[] args) {
+        for (int abc = 100; abc <= 999; abc++) {
+            int a = abc / 100;
+            int b = (abc / 10) % 10;
+            int c = abc % 10;
+            int cba = 100 * c + 10 * b + a;
+
+            // Koşul 1: cba, abc'den büyük olmalıdır.
+            if (cba > abc) {
+                // Koşul 2: abc asal sayı olmalıdır.
+                if (ASALS(abc)) {
+                    // Koşul 3: cba asal sayı olmalıdır.
+                    if (ASALS(cba)) {
+                        // Koşul 4: ab asal sayı olmalıdır.
+                        if (ASALS(a * 10 + b)) {
+                            // Koşul 5: bc asal sayı olmalıdır.
+                            if (ASALS(b * 10 + c)) {
+                                // Koşul 6: cb asal sayı olmalıdır.
+                                if (ASALS(c * 10 + b)) {
+                                    // Koşul 7: ba asal sayı olmalıdır.
+                                    if (ASALS(b * 10 + a)) {
+                                        // Tüm koşulları sağlayan abc sayısını yazdır.
+                                        System.out.println(abc);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    public static boolean ASALS(int sayi) {
+        if (sayi <= 1) {
+            return false;
+        }
+        if (sayi <= 3) {
+            return true;
+        }
+        if (sayi % 2 == 0 || sayi % 3 == 0) {
+            return false;
+        }
+        for (int i = 5; i * i <= sayi; i = i + 6) {
+            if (sayi % i == 0 || sayi % (i + 2) == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
