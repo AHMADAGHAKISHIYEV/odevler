@@ -1,0 +1,53 @@
+public class odev3ornek5 {
+    public static void main(String[] args) {
+        int number = 1001; // Test etmek istediğiniz sayıyı burada belirtin
+        boolean isPrimeXResult = isPrimeX(number);
+        if (isPrimeXResult) {
+            System.out.println(number + " sayısı istenen koşulları sağlıyor.");
+        } else {
+            System.out.println(number + " sayısı istenen koşulları sağlamıyor.");
+        }
+    }
+
+    // Bir sayının asal olup olmadığını kontrol eden yardımcı fonksiyon
+    public static boolean isPrime(int number) {
+        if (number <= 1) {
+            return false;
+        }
+        if (number <= 3) {
+            return true;
+        }
+        if (number % 2 == 0 || number % 3 == 0) {
+            return false;
+        }
+        for (int i = 5; i * i <= number; i += 6) {
+            if (number % i == 0 || number % (i + 2) == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // Verilen sayının tüm basamaklarını toplayan yardımcı fonksiyon
+    public static int sumOfDigits(int number) {
+        int sum = 0;
+        while (number > 0) {
+            int digit = number % 10;
+            sum += digit;
+            number /= 10;
+        }
+        return sum;
+    }
+
+    // İstenen koşulları sağlayan metot
+    public static boolean isPrimeX(int number) {
+        while (number > 9) {
+            if (!isPrime(number)) {
+                return false;
+            }
+            number = sumOfDigits(number);
+        }
+        // Son kalan tek basamaklı sayıyı kontrol et
+        return isPrime(number);
+    }
+}
